@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kcal Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1>Kalkulator kalorii i mikroskładników</h1>
+        <div class="container">
+
+            <div class="form-container">
+                <p class="notif">Podaj wartości w gramach <br> <span style="margin: 5px 0 0 0; font-size: 13px; color:red;" class="notif-span"> *sugerowanie składem/100g*</span></p>
+                <input type="text" class="productName" autofocus placeholder="Nazwa produktu">
+                <input type="number" step="0.100" placeholder="Waga" class="weight">
+                <input type="number" placeholder="Kcal" class="kcal">
+                <input type="number" placeholder="Białko" class="protein">
+                <input type="number" placeholder="Węglowodany" class="carbs">
+                <input type="number" placeholder="Tłuszcz" class="fat">
+                <input type="number" placeholder="Cukier" class="sugar">  <br>
+                
+            <button class="count-btn">Oblicz</button>
+            </div>
+            
+    
+            <div class="result-container">
+                    <p class="product-name">Produkt: <span class="productNameField">-</span></p>
+                    <div class="underline"></div>
+                    <p class="weightRes">Waga: <span class="weightResSpan"> - </span></p>
+                    <div class="underline"></div>
+                    <p class="kcalRes">Kalorie: <span class="kcalResSpan">-</span> </p>
+                    <div class="underline"></div>
+                    <p class="proteinRes">Białko: <span class="proteinResSpan">-</span> </p>
+                    <div class="underline"></div>
+                    <p class="carbsRes">Węglowodany: <span class="carbsResSpan">-</span> </p>
+                    <div class="underline"></div>
+                    <p class="fatRes">Tłuszcz: <span class="fatResSpan">-</span> </p>
+                    <div class="underline"></div>
+                    <p class="sugarRes">Cukier: <span class="sugarResSpan">-</span> </p>
+                    <div class="underline"></div>
+            </div>
+
+        
+        </div>
+        <div class="history">
+
+            <h2>Historia</h2>
+                <div class="sum-container">
+                    <!-- <div class="sum-content-container"> -->
+                        <div class="sum-content">
+
+                        </div>
+                    <!-- </div> -->
+                        
+                </div>
+        </div>
+
+        <div class="calc">
+            <h2>Suma</h2>
+            <div class="underline" style="margin-bottom: 10px;"></div>
+            <span class="calc-span">To Be Continued</span>
+        </div>
+            
+    <script src="app.js"></script>
+</body>
+</html>
