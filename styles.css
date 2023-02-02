@@ -4,18 +4,23 @@ body{
     height: 100vh;
     /* overflow-y: hidden; */
     /* background: linear-gradient(to bottom right, #a51d45, rgb(126, 21, 196), rgb(89, 63, 207)); */
-    text-align: center;
     background-color: rgb(21, 24, 23);
     color: white;    
     display: flex;
     flex-direction: column;
     align-items:  center;
 }
+.notif{
+    text-align: center;
+}
 .underline{
     border-bottom: 2px dotted white;
 }
+.underline2{
+    border-bottom: 2px solid white;
+}
 h1{
-    min-width: 750;
+    min-width: 750px;
 }
 .result-container{
     width: 270px;
@@ -33,7 +38,7 @@ h1{
     font-weight: bold;
     font-size: 20px;
 }
-.count-btn{
+.count-btn, .remove-btn{
     margin: 10px 0 0 0;
     min-width: 100px;
     width: 150px;
@@ -46,6 +51,7 @@ h1{
     color: white;
     letter-spacing: 2px;
 }
+
 .form-container input{
     /* background-color: rgba(131, 80, 226, 0.425); */
     border: 2px solid yellow;
@@ -67,4 +73,41 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.sum-container{
+    width: 800px;
+    /* background-color: rgb(7, 101, 184); */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.sum-content p{
+    font-size: 20px;
+    width: 800px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.sum-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+.calc{
+    width: 800px;
+    text-align: center;
+}
+.calc-span{
+    font-size: 25px;
+    padding: 10px 0 10px 0;
 }
