@@ -1,12 +1,12 @@
 let countBtn = document.querySelector('.count-btn').addEventListener('click', () => {
 
-        let weight = document.querySelector('.weight').value * 0.01;
-        let kcal = document.querySelector('.kcal').value;
-        let protein = document.querySelector('.protein').value;
-        let carbs = document.querySelector('.carbs').value;
-        let fat = document.querySelector('.fat').value;
-        let sugar = document.querySelector('.sugar').value;
-        let productName = document.querySelector('.productName').value;
+        const weight = document.querySelector('.weight').value * 0.01;
+        const kcal = document.querySelector('.kcal').value;
+        const protein = document.querySelector('.protein').value;
+        const carbs = document.querySelector('.carbs').value;
+        const fat = document.querySelector('.fat').value;
+        const sugar = document.querySelector('.sugar').value;
+        const productName = document.querySelector('.productName').value;
 
         const kcalRes = document.querySelector('.kcalResSpan')
         const proteinRes = document.querySelector('.proteinResSpan')
@@ -15,13 +15,16 @@ let countBtn = document.querySelector('.count-btn').addEventListener('click', ()
         const sugarRes = document.querySelector('.sugarResSpan')
         const notif = document.querySelector('.notif');
         const productNameField = document.querySelector('.productNameField');
+        // const sumContainer = document.querySelector(".sum-container")
+        const sumContent = document.querySelector('.sum-content');
 
-        let weightKcalRes = weight * kcal + ' kcal';
-        let weightProteinRes = weight * protein + ' g';
-        let weightCarbsRes = weight * carbs + ' g';
-        let weightFatRes = weight * fat + ' g';
-        let weightSugarRes = weight * sugar + ' g';
 
+        let weightKcalRes = Math.round(weight * kcal)  + ' kcal';
+        let weightProteinRes = Math.round(weight * protein) + ' g';
+        let weightCarbsRes = Math.round(weight * carbs) + ' g';
+        let weightFatRes = Math.round(weight * fat) + ' g';
+        let weightSugarRes = Math.round(weight * sugar) + ' g';
+        
         kcalRes.innerHTML = weightKcalRes;
         proteinRes.innerHTML = weightProteinRes;
         carbsRes.innerHTML = weightCarbsRes;  
@@ -46,7 +49,33 @@ let countBtn = document.querySelector('.count-btn').addEventListener('click', ()
         sugarRes.style.color = color;
         sugarRes.style.fontSize = fontSize;
         
+        productNameField.style.color = color;
+        productNameField.style.fontSize = fontSize;
         productNameField.innerHTML = productName;
+
+        const sumPar = document.createElement("p");
+        const sumText = document.createTextNode(productName + " || ");
+        sumText.textContent += weightKcalRes + ' || ';
+        sumText.textContent += weightProteinRes +' || ';
+        sumText.textContent += weightCarbsRes +' || ';
+        sumText.textContent += weightProteinRes +' || '; 
+        sumText.textContent += weightSugarRes +' || ';
+        sumPar.appendChild(sumText);
+
+        const removeBtn = document.createElement('button');
+        removeBtn.classList.add('remove-btn')
+        const btnText = document.createTextNode('Usuń');
+        removeBtn.appendChild(btnText);
+        removeBtn.addEventListener('click', () => {
+                sumPar.remove();
+                removeBtn.remove();
+        })
+
+        // sumContainer.appendChild(sumContent);
+        sumContent.classList.add('underline2')
+        sumContent.appendChild(sumPar);
+        sumPar.appendChild(removeBtn);
+        
 })
     
 
